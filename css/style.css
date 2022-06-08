@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*väljer font */
+@font-face {  
+    font-family: lcd;
+    src: url(../font/SUBWT___.ttf);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/*centerar och bestämmer utseende för miniräknaren */
+body{
+    max-height: 12rem;
+    width: min(100% - 2rem, 800px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    background-color: black;
+}
+
+
+/* utseende för knappar */
+main button {
+    height: 12rem;
+    border-radius: 8px;
+    color: black;
+    background-color: white;
+    font-size: 5rem;
+    
+}
+/*ändrar färg vid tryck*/
+main button:active{
+    background-color:rgb(173, 173, 173);
+}
+/*ändrar färg på knappar som ej är siffror*/
+main button:not([id^="b"]) {
+    color: rgb(70, 198, 240);
+}
+/* bestämmer utseende för input*/
+main input {
+    width: min(100%);
+    font-size: 5rem;
+    margin-bottom: 10px;
+    background-color: black;
+    color: green;
+    text-align: right;
+    padding: 10px 4px 10px 4px;
+    font-family: lcd;
+    border: 1px solid yellow;
+    border-radius: 8px; 
+}
+/*initierar grid*/
+main section#keyBoard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.2rem;
+}
+
+/*ändrar storlek för små skärmar*/
+@media (max-width: 500px) {
+    main button {
+        max-height: 8rem;
+        font-size: 3.5rem;
+    }
+}
+
