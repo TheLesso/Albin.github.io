@@ -13,8 +13,7 @@ function init() {
     lcd = document.getElementById('lcd');
     let keyBoard = document.getElementById('keyBoard')
     keyBoard.onclick = buttonClick;
-    alert('har ändrat cos,sin,tan så de funkar som vanliga miniräknare, har även komprimerat lite kod och fixat så tecknet för artemetiken man använder visas imellan inputs av värdena FINNS I INIT FÖR ATT TAS BORT')
-}
+    }
 /**
  * Händelsehanterare för kalkylatorns tangentbord
  */
